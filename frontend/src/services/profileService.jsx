@@ -28,6 +28,6 @@ export const updateJobSeekerProfile = async (profileData) => {
 };
 
 export const deleteJobSeekerProfile = async () => {
-  const response = await axios.delete(`http://localhost:4000/api/v1/jobseeker/profile`);
+  const response = await axios.delete(`https://job-boarding-app-backend.onrender.com/api/v1/jobseeker/profile`);
   return response.data;
 };
