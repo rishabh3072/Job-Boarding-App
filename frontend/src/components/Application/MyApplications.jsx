@@ -22,8 +22,8 @@ const MyApplications = () => {
         try {
           const url =
             user.role === "Employer"
-              ? "http://localhost:4000/api/v1/application/employer/getall"
-              : "http://localhost:4000/api/v1/application/jobseeker/getall";
+              ? "https://job-boarding-app-backend.onrender.com/api/v1/application/employer/getall"
+              : "https://job-boarding-app-backend.onrender.com/api/v1/application/jobseeker/getall";
 
           const { data } = await axios.get(url, { withCredentials: true });
           setApplications(data.applications);
@@ -43,7 +43,7 @@ const MyApplications = () => {
   const deleteApplication = async (id) => {
     try {
       const { data } = await axios.delete(
-        `http://localhost:4000/api/v1/application/delete/${id}`,
+        `https://job-boarding-app-backend.onrender.com/api/v1/application/delete/${id}`,
         { withCredentials: true }
       );
       toast.success(data.message);
@@ -65,7 +65,7 @@ const MyApplications = () => {
   const hireApplicant = async (id) => {
     try {
       const { data } = await axios.post(
-        `http://localhost:4000/api/v1/application/hire/${id}`,
+        `https://job-boarding-app-backend.onrender.com/api/v1/application/hire/${id}`,
         {},
         { withCredentials: true }
       );
