@@ -31,7 +31,7 @@ const PostJob = () => {
     }
     await axios
       .post(
-        "https://job-boarding-app-frontend.onrender.com/api/v1/job/post",
+        "https://job-boarding-app-backend.onrender.com/api/v1/job/post",
         fixedSalary.length >= 4
           ? {
               title,
