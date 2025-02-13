@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "proxy": "https://job-boarding-app-backend.onrender.com/",
+  "proxy": "https://job-boarding-app-backend.onrender.com",
 
   "scripts": {
     "dev": "vite",
