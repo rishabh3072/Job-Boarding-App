@@ -16,7 +16,7 @@ import MyApplications from "./components/Application/MyApplications";
 import PostJob from "./components/Job/PostJob";
 import NotFound from "./components/NotFound/NotFound";
 import MyJobs from "./components/Job/MyJobs";
-import EmployerProfile from "./components/employerProfile.jsx";
+import EmployerProfile from "./components/EmployerProfile.jsx";
 import JobSeekerProfile from './components/JobSeekerProfile.jsx';
 
 const App = () => {
