@@ -10,7 +10,7 @@ const Jobs = () => {
   useEffect(() => {
     try {
       axios
-        .get("https://job-boarding-app-frontend.onrender.com/api/v1/job/getall", {
+        .get("https://job-boarding-app-backend.onrender.com/api/v1/job/getall", {
           withCredentials: true,
         })
         .then((res) => {
