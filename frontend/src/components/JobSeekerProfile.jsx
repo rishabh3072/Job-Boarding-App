@@ -30,7 +30,7 @@ const JobSeekerProfile = () => {
     e.preventDefault();
     try {
       const { data } = await axios.put(
-        "https://job-boarding-app-frontend.onrender.com/api/v1/user/update",
+        "https://job-boarding-app-backend.onrender.com/api/v1/user/update",
         formData,
         { withCredentials: true }
       );
