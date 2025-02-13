@@ -25,7 +25,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "https://job-boarding-app-frontend.onrender.com/api/v1/user/getuser",
+          "https://job-boarding-app-backend.onrender.com/api/v1/user/getuser",
           {
             withCredentials: true,
           }
