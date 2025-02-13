@@ -16,7 +16,7 @@ import MyApplications from "./components/Application/MyApplications";
 import PostJob from "./components/Job/PostJob";
 import NotFound from "./components/NotFound/NotFound";
 import MyJobs from "./components/Job/MyJobs";
-import EmployerProfile from "./components/employerProfile.jsx";
+import EmployerProfile from "./components/EmployerProfile.jsx";
 import JobSeekerProfile from './components/JobSeekerProfile.jsx';
 
 const App = () => {
@@ -25,7 +25,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/api/v1/user/getuser",
+          "https://job-boarding-app-frontend.onrender.com/api/v1/user/getuser",
           {
             withCredentials: true,
           }

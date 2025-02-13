@@ -20,7 +20,7 @@ const EmployerProfile = () => {
 
   const fetchJobs = async () => {
     try {
-      const { data } = await axios.get("http://localhost:4000/api/v1/job/getmyjobs", { withCredentials: true });
+      const { data } = await axios.get("https://job-boarding-app-frontend.onrender.com/api/v1/job/getmyjobs", { withCredentials: true });
       setJobs(data.myJobs);
     } catch (error) {
       toast.error("Failed to fetch jobs");
@@ -41,7 +41,7 @@ const EmployerProfile = () => {
     const formData = new FormData();
     formData.append("profilePicture", file);
 
-    axios.post("http://localhost:4000/api/v1/user/uploadProfilePicture", formData, {
+    axios.post("https://job-boarding-app-frontend.onrender.com/api/v1/user/uploadProfilePicture", formData, {
       withCredentials: true,
       headers: { "Content-Type": "multipart/form-data" },
     })
@@ -58,7 +58,7 @@ const EmployerProfile = () => {
     e.preventDefault();
     try {
       const { data } = await axios.put(
-        "http://localhost:4000/api/v1/user/update",
+        "https://job-boarding-app-frontend.onrender.com/api/v1/user/update",
         formData,
         { withCredentials: true }
       );
