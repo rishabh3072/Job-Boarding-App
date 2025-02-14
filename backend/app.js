@@ -10,9 +10,14 @@ import cookieParser from "cookie-parser";
 import fileUpload from "express-fileupload";
 const app = express();
 config({ path: "./config/config.env" });
-
+app.use(session({
+  secret: [process.env.JWT_SECRET_KEY],
+  cookie: { secure: true, sameSite: 'none' },
+  resave: false,
+  saveUninitialized: true,
+}));
 app.use(express.static("public"));
-
+app.set('trust proxy', true);
 app.use(
   cors({
     origin: [process.env.FRONTEND_URL],
