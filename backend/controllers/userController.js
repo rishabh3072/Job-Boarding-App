@@ -40,6 +40,7 @@ export const login = catchAsyncErrors(async (req, res, next) => {
       new ErrorHandler(`User with provided email and ${role} not found!`, 404)
     );
   }
+  console.log("IEFI");
   sendToken(user, 201, res, "User Logged In!");
 });
 
