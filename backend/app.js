@@ -15,7 +15,7 @@ app.use(express.static("public"));
 
 app.use(
   cors({
-    origin: 'https://job-boarding-app-frontend.onrender.com',
+    origin: [process.env.FRONTEND_URL],
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
